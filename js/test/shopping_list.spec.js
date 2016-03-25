@@ -82,6 +82,20 @@ describe('ShoppingListItem', function () {
     it('should be a method on ShoppingListItem', function () {
 
       expect(SLI.render).to.be.a('function');
+    });
+
+    it('should construct and return an html formatted string', function () {
+
+      var renderTest = new ShoppingListItem('Avocado', 'Must be eaten immediately.');
+      renderTest.uncheck();
+
+      expect(renderTest.render()).to.be.a('string');
+      expect(renderTest.render()).to.equal("<ul> \
+        <li class=\"completed_false\"> \
+        <span>Avocado</span> \
+        <span>Must be eaten immediately.</span> \
+        </li> \
+        <ul>");
     })
   })
 
