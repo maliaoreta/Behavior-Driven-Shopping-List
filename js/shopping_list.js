@@ -18,11 +18,17 @@ ShoppingListItem.prototype.uncheck = function () {
 ShoppingListItem.prototype.render = function () {
 
   var htmlOutput = "<ul> \
-        <li class=\"completed_false\"> \
-        <span>Avocado</span> \
-        <span>Must be eaten immediately.</span> \
+        <li class=\"completed_" + this.is_done + "\"> \
+        <span>" + this.name + "</span> \
+        <span>" + this.description + "</span> \
         </li> \
         <ul>";
 
   return htmlOutput;
 }
+
+var ShoppingList = function () {
+
+  
+}
+
