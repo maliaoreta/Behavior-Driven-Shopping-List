@@ -115,4 +115,14 @@ describe('ShoppingList', function () {
 
     expect(SL).to.have.property('items');
   })
+
+  //Test constructor method
+  describe('constructor method', function () {
+
+    it('should initialize the items property as an empty Array', function () {
+
+      expect(SL.items).to.be.a('array');
+      expect(SL.items).to.be.empty;
+    })
+  })
 })
