@@ -30,6 +30,8 @@ describe('ShoppingListItem', function () {
     expect(SLI).to.have.property('is_done');
    });
 
+
+  // TESTING METHODS
   // Check constructor method
   describe('constructor method', function () {
 
@@ -45,5 +47,15 @@ describe('ShoppingListItem', function () {
       expect(constructorTest.description).to.equal('snack item');
     })
   });
+
+  // Test check method
+  describe('check method', function () {
+
+    it('should be a method on ShoppingListItem', function () {
+
+      expect(SLI.check).to.be.a('function');
+    })
+  })
+
 
 ;});
