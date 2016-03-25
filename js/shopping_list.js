@@ -4,3 +4,8 @@ var ShoppingListItem = function (name, description) {
  this.description = description;
  this.is_done = false;
 }
+
+ShoppingListItem.prototype.check = function () {
+
+  
+}
