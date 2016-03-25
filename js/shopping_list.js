@@ -1,7 +1,7 @@
 var ShoppingList = function () {
 
   this.items = [];
-}
+};
 
 ShoppingList.prototype.addItem = function (shoppingListItem) {
   
@@ -12,4 +12,9 @@ ShoppingList.prototype.addItem = function (shoppingListItem) {
   else {
     return this.items.push(shoppingListItem);
   }
+};
+
+ShoppingList.prototype.removeItem = function () {
+
+  
 }
