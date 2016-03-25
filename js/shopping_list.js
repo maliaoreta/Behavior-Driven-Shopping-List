@@ -17,5 +17,12 @@ ShoppingListItem.prototype.uncheck = function () {
 
 ShoppingListItem.prototype.render = function () {
 
-  
+  var htmlOutput = "<ul> \
+        <li class=\"completed_false\"> \
+        <span>Avocado</span> \
+        <span>Must be eaten immediately.</span> \
+        </li> \
+        <ul>";
+
+  return htmlOutput;
 }
