@@ -28,6 +28,15 @@ describe('ShoppingList', function () {
     it('should be a method in ShoppingList', function () {
 
       expect(SL.addItem).to.be.a('function');
+    });
+
+    it('should accept a single ShoppingListItem object as an argument and add it to the items array', function () {
+
+      var itemTest = new ShoppingListItem('coffee', 'required to function');
+      SL.addItem(itemTest);
+      expect(SL.items).to.include(itemTest);
+
     })
-  })
+
+  });
 });
