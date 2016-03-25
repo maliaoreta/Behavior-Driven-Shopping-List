@@ -29,6 +29,6 @@ ShoppingListItem.prototype.render = function () {
 
 var ShoppingList = function () {
 
-  
+  this.items = null;
 }
 
