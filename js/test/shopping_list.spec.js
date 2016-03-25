@@ -54,8 +54,13 @@ describe('ShoppingListItem', function () {
     it('should be a method on ShoppingListItem', function () {
 
       expect(SLI.check).to.be.a('function');
+    });
+
+    it('should set is_done property to true', function () {
+
+      expect(SLI.check()).to.be.true;
     })
-  })
+  });
 
 
 ;});
