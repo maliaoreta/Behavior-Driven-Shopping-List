@@ -12,8 +12,8 @@ describe('ShoppingListItem', function () {
 
       var nameCheck = new ShoppingListItem();
       expect(nameCheck).to.have.property('name');
-    })
-  })
+    });
+  });
 
   // Checks if description property exists
   describe('description', function () {
@@ -22,6 +22,16 @@ describe('ShoppingListItem', function () {
 
       var describeCheck = new ShoppingListItem();
       expect(describeCheck).to.have.property('description');
+    });
+  });
+
+  //Checks if is_done is a property
+  describe('is_done', function () {
+
+    it('should be a property in ShoppingListItem', function () {
+
+      var isDone = new ShoppingListItem();
+      expect(isDone).to.have.property('is_done');
     })
   })
 });
