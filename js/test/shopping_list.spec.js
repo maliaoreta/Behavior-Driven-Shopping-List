@@ -35,10 +35,15 @@ describe('ShoppingListItem', function () {
 
     var constructorTest = new ShoppingListItem('pretzel', 'snack item');
 
-    it('should accept name as an argument and set it using the passed in argument', function () {
+    it('should accept name as an argument and set the name property using the passed in argument', function () {
 
       expect(constructorTest.name).to.equal('pretzel');
+    });
+
+    it('should accept description as an argument and set the description property using the passed in argument', function () {
+
+      expect(constructorTest.description).to.equal('snack item');
     })
-  })
+  });
 
 ;});
