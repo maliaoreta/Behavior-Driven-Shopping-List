@@ -96,7 +96,16 @@ describe('ShoppingListItem', function () {
         <span>Must be eaten immediately.</span> \
         </li> \
         <ul>");
-    })
-  })
+    });
+  });
 
-;});
+});
+
+
+describe('ShoppingList', function () {
+
+  it('should be a class', function () {
+
+    expect(ShoppingList).to.be.a('function');
+  })
+})
