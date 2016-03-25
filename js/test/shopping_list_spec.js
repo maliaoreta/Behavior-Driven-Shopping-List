@@ -41,6 +41,14 @@ describe('ShoppingList', function () {
 
       expect(function () { SL.addItem('not an item'); }).to.throw(Error);
     });
-
   });
+
+  //Test removeItem method
+  describe('removeItem method', function () {
+
+    it('should be a method in ShoppingList', function () {
+
+      expect(SL.removeItem).to.be.a('function');
+    }) 
+  })
 });
