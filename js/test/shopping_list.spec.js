@@ -62,5 +62,14 @@ describe('ShoppingListItem', function () {
     })
   });
 
+  // Test uncheck method
+  describe('uncheck method', function () {
+
+    it('should be a method on ShoppingListItem', function () {
+
+      expect(SLI.uncheck).to.be.a('function');
+    })
+  })
+
 
 ;});
