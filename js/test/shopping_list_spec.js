@@ -33,8 +33,9 @@ describe('ShoppingList', function () {
     it('should accept a single ShoppingListItem object as an argument and add it to the items array', function () {
 
       var itemTest = new ShoppingListItem('coffee', 'required to function');
-      SL.addItem(itemTest);
-      expect(SL.items).to.include(itemTest);
+      var addItemTest = new ShoppingList();
+      addItemTest.addItem(itemTest);
+      expect(addItemTest.items).to.include(itemTest);
     });
 
     it('should throw an error if argument is not a ShoppingListItem', function () {
@@ -49,6 +50,23 @@ describe('ShoppingList', function () {
     it('should be a method in ShoppingList', function () {
 
       expect(SL.removeItem).to.be.a('function');
-    }) 
+    });
+
+    it('should accept a ShoppingListItem as an argument and remove it from the items array', function () {
+
+      var testItem = new ShoppingListItem('pretzel', 'snack');
+      var removeItemTest = new ShoppingList();
+      removeItemTest.addItem(testItem);
+      removeItemTest.removeItem(testItem);
+      expect(removeItemTest.items).to.be.empty;
+
+      var testItem1 = new ShoppingListItem('grape', 'fruit');
+      var testItem2 = new ShoppingListItem('apple', 'red fruit');
+      var itemTest = new ShoppingList;
+      itemTest.addItem(testItem1);
+      itemTest.addItem(testItem2);
+      itemTest.removeItem(testItem1);
+      expect(itemTest.items)  
+    })
   })
 });
