@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping List Test</title>
+  <link rel="stylesheet" href="/css/mocha.css">
+</head>
+<body>
+
+  <div id="mocha"></div>  
+  
+  <script src="/js/mocha.js"></script>
+  <script src="/js/chai.js"></script>
+  <script>mocha.setup('bdd');</script>
+  <script src="/js/shopping_list.js"></script>
+  <script src="/js/test/shopping_list.spec.js"></script>
+  <script>
+    var expect = chai.expect;
+    chai.should();
+    mocha.run();
+  </script>
+</body>
+</html>
