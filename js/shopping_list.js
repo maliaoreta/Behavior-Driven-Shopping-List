@@ -9,3 +9,8 @@ ShoppingListItem.prototype.check = function () {
 
   return this.is_done = true;
 }
+
+ShoppingListItem.prototype.uncheck = function () {
+
+  
+}
