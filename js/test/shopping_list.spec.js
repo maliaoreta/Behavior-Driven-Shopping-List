@@ -68,8 +68,13 @@ describe('ShoppingListItem', function () {
     it('should be a method on ShoppingListItem', function () {
 
       expect(SLI.uncheck).to.be.a('function');
+    });
+
+    it('should set is_done to false', function () {
+
+      expect(SLI.uncheck()).to.be.false;
     })
-  })
+  });
 
 
 ;});
