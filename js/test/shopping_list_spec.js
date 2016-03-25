@@ -35,8 +35,12 @@ describe('ShoppingList', function () {
       var itemTest = new ShoppingListItem('coffee', 'required to function');
       SL.addItem(itemTest);
       expect(SL.items).to.include(itemTest);
+    });
 
-    })
+    it('should throw an error if argument is not a ShoppingListItem', function () {
+
+      expect(function () { SL.addItem('not an item'); }).to.throw(Error);
+    });
 
   });
 });
