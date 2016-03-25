@@ -14,3 +14,8 @@ ShoppingListItem.prototype.uncheck = function () {
 
   return this.is_done = false;
 }
+
+ShoppingListItem.prototype.render = function () {
+
+  
+}
