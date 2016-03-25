@@ -104,8 +104,15 @@ describe('ShoppingListItem', function () {
 
 describe('ShoppingList', function () {
 
+  var SL = new ShoppingList();
+
   it('should be a class', function () {
 
     expect(ShoppingList).to.be.a('function');
+  })
+
+  it('should have a property named items', function () {
+
+    expect(SL).to.have.property('items');
   })
 })
