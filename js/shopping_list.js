@@ -14,7 +14,8 @@ ShoppingList.prototype.addItem = function (shoppingListItem) {
   }
 };
 
-ShoppingList.prototype.removeItem = function () {
+ShoppingList.prototype.removeItem = function (shoppingListItem) {
 
-  
+  var indexToRemove = this.items.indexOf(shoppingListItem);
+  return this.items.splice(indexToRemove, 1);
 }
