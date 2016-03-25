@@ -4,6 +4,12 @@ var ShoppingList = function () {
 }
 
 ShoppingList.prototype.addItem = function (shoppingListItem) {
- 
-  return this.items.push(shoppingListItem);
+  
+
+  if (shoppingListItem instanceof ShoppingListItem === false) {
+    throw new Error('Not a ShoppingListItem');
+  }
+  else {
+    return this.items.push(shoppingListItem);
+  }
 }
