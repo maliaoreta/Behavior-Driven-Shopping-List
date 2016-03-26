@@ -100,4 +100,13 @@ describe('ShoppingList', function () {
       expect(SL1.removeItem.bind(SL1, 'not an item')).to.throw(Error);
     });
   });
+
+  // Tests render method
+  describe('render method', function () {
+
+    it('should be a method in ShoppingList', function () {
+
+      expect(SL.render).to.be.a('function');
+    });
+  });
 });
