@@ -36,5 +36,14 @@ ShoppingList.prototype.removeItem = function (shoppingListItem) {
 
 ShoppingList.prototype.render = function () {
 
-  
-}
+  var htmlOutput = '<ul> \n' ;
+
+  this.items.forEach(function (item) {
+
+    htmlOutput = htmlOutput.concat(item.render() + '\n');
+    return htmlOutput;
+  })
+
+  htmlOutput = htmlOutput.concat('<ul>');
+  return htmlOutput;
+};
