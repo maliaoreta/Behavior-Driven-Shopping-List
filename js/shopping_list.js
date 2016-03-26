@@ -16,6 +16,16 @@ ShoppingList.prototype.addItem = function (shoppingListItem) {
 
 ShoppingList.prototype.removeItem = function (shoppingListItem) {
 
-  var indexToRemove = this.items.indexOf(shoppingListItem);
-  return this.items.splice(indexToRemove, 1);
-}
+  if (!this.items[0]) {
+
+    return "The items array is empty! There is nothing to remove!";
+  }
+  else {
+
+    var indexToRemove = this.items.indexOf(shoppingListItem);
+    return this.items.splice(indexToRemove, 1);
+  }
+
+
+
+};
