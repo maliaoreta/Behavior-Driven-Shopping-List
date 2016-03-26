@@ -69,6 +69,29 @@ describe('ShoppingList', function () {
       removeFirstItemTest.addItem(testItem2);
       removeFirstItemTest.removeItem(testItem1);
       expect(removeFirstItemTest.items).to.not.include.members([testItem1]);
-    })
-  })
+    });
+
+    it('should remove the last item in the items array if no parameter is provided', function () {
+
+      var testItem = new ShoppingListItem('pretzel', 'snack');
+      var testItem1 = new ShoppingListItem('grape', 'fruit');
+      var testItem2 = new ShoppingListItem('apple', 'red fruit');
+      var removeLastItemTest = new ShoppingList();
+      
+      // removes last item when no parameter given
+      removeLastItemTest.addItem(testItem);
+      removeLastItemTest.addItem(testItem1);
+      removeLastItemTest.addItem(testItem2);
+      removeLastItemTest.removeItem();
+      expect(removeLastItemTest.items).to.not.include.members([testItem2]);
+    });
+
+    it('if items array is empty, should return a string that says so', function () {
+
+      var testEmptyItems = new ShoppingList();
+      expect(testEmptyItems.items).to.be.empty;
+      expect(testEmptyItems.removeItem()).to.be.a('string');
+    });
+
+  });
 });
