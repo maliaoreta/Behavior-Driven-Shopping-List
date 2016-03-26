@@ -1,7 +1,6 @@
-body {
-  background-color: red;
+$primary-color: lightsteelblue;
 
-  h1 {
-    color: purple;
-  }
+
+body {
+  background-color: $primary-color;
 }
