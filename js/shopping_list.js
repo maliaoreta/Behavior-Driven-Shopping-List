@@ -5,7 +5,6 @@ var ShoppingList = function () {
 
 ShoppingList.prototype.addItem = function (shoppingListItem) {
   
-
   if (shoppingListItem instanceof ShoppingListItem === false) {
     throw new Error('Please enter a ShoppingListItem!');
   }
@@ -33,6 +32,9 @@ ShoppingList.prototype.removeItem = function (shoppingListItem) {
     var indexToRemove = this.items.indexOf(shoppingListItem);
     return this.items.splice(indexToRemove, 1);
   }
-
-
 };
+
+ShoppingList.prototype.render = function () {
+
+  
+}
