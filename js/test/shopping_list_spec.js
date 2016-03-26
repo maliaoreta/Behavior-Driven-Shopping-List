@@ -70,19 +70,13 @@ describe('ShoppingList', function () {
       removeFirstItemTest.removeItem(testItem1);
       expect(removeFirstItemTest.items).to.not.include.members([testItem1]);
     });
+
     
-    it('if specified item is not in array, return a string that says so', function () {
+    it('if given item is not in array, return a string that says so', function () {
 
       var notInArray = new ShoppingListItem('brownie', 'dessert');
       var existsTest = new ShoppingList();
       expect(existsTest.removeItem(notInArray)).to.be.a('string');
-    });
-
-    it('if items array is empty, should return a string that says so', function () {
-
-      var testEmptyItems = new ShoppingList();
-      expect(testEmptyItems.items).to.be.empty;
-      expect(testEmptyItems.removeItem()).to.be.a('string');
     });
 
     it('should remove the last item in the items array if no parameter is provided', function () {
@@ -100,7 +94,10 @@ describe('ShoppingList', function () {
       expect(removeLastItemTest.items).to.deep.equal([testItem, testItem1]);
     });
 
+    it('if given item is not a ShoppingListItem, throw an error', function () {
 
-
+      var SL1 = new ShoppingList();
+      expect(SL1.removeItem.bind(SL1, 'not an item')).to.throw(Error);
+    });
   });
 });
