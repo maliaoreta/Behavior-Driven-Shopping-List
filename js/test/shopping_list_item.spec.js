@@ -90,12 +90,7 @@ describe('ShoppingListItem', function () {
       renderTest.uncheck();
 
       expect(renderTest.render()).to.be.a('string');
-      expect(renderTest.render()).to.equal("<ul> \
-        <li class=\"completed_false\"> \
-        <span>Avocado</span> \
-        <span>Must be eaten immediately.</span> \
-        </li> \
-        <ul>");
+      expect(renderTest.render()).to.equal("<li class=\"completed_false\"> \n<span>Avocado</span> \n<span>Must be eaten immediately.</span> \n</li>");
     });
   });
 
