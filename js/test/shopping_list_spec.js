@@ -108,5 +108,25 @@ describe('ShoppingList', function () {
 
       expect(SL.render).to.be.a('function');
     });
+
+    it('should return the result of calling render() on each item in the items array as an html formatted string', function () {
+
+      //test when theres one item in items array
+      var pretzel = new ShoppingListItem('pretzel', 'snack');
+      pretzel.uncheck();
+      var renderTest1 = new ShoppingList();
+      renderTest1.addItem(pretzel);
+      expect(renderTest1.render(pretzel.render())).to.be.a('string');
+      expect(renderTest1.render(pretzel.render())).to.equal('<ul> \n<li class=\"completed_false\"> \n<span>pretzel</span> \n<span>snack</span> \n</li>\n<ul>');
+    
+      //test when theres two items in items array
+      var cookie = new ShoppingListItem('cookie', 'dessert');
+      cookie.uncheck();
+      var renderTest2 = new ShoppingList();
+      renderTest2.addItem(pretzel);
+      renderTest2.addItem(cookie);
+      expect(renderTest2.render(pretzel.render(), cookie.render())).to.be.a('string');
+      expect(renderTest2.render(pretzel.render(), cookie.render())).to.equal('<ul> \n<li class=\"completed_false\"> \n<span>pretzel</span> \n<span>snack</span> \n</li>\n<li class=\"completed_false\"> \n<span>cookie</span> \n<span>dessert</span> \n</li>\n<ul>')
+    });
   });
 });
