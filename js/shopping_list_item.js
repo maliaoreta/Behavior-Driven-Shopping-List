@@ -17,12 +17,7 @@ ShoppingListItem.prototype.uncheck = function () {
 
 ShoppingListItem.prototype.render = function () {
 
-  var htmlOutput = "<ul> \
-        <li class=\"completed_" + this.is_done + "\"> \
-        <span>" + this.name + "</span> \
-        <span>" + this.description + "</span> \
-        </li> \
-        <ul>";
+  var htmlOutput = "<li class=\"completed_" + this.is_done + "\"> \n<span>" + this.name + "</span> \n<span>" + this.description + "</span> \n</li>";
 
   return htmlOutput;
 };
