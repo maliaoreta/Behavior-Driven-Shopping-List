@@ -7,7 +7,7 @@ ShoppingList.prototype.addItem = function (shoppingListItem) {
   
 
   if (shoppingListItem instanceof ShoppingListItem === false) {
-    throw new Error('Not a ShoppingListItem');
+    throw new Error('Please enter a ShoppingListItem!');
   }
   else {
     return this.items.push(shoppingListItem);
@@ -16,15 +16,15 @@ ShoppingList.prototype.addItem = function (shoppingListItem) {
 
 ShoppingList.prototype.removeItem = function (shoppingListItem) {
 
-  if (this.items[0] === undefined) {
+  if (shoppingListItem instanceof ShoppingListItem === false && shoppingListItem !== undefined) {
 
-    return "The items array is empty! There is nothing to remove!";
+    throw new Error('Please enter a ShoppingListItem!');
   }
   else if (this.items.includes(shoppingListItem) === false && shoppingListItem !== undefined) {
    
     return "That item is not in your items array!";
   }
-  else if (shoppingListItem === undefined) {
+  else if (shoppingListItem === undefined && this.items.length > 0) {
     
     return this.items.splice(this.items.length-1, 1);
   }
