@@ -54,19 +54,21 @@ describe('ShoppingList', function () {
 
     it('should accept a ShoppingListItem as an argument and remove it from the items array', function () {
 
+      // Removes item when it's the only item in items array
       var testItem = new ShoppingListItem('pretzel', 'snack');
-      var removeItemTest = new ShoppingList();
-      removeItemTest.addItem(testItem);
-      removeItemTest.removeItem(testItem);
-      expect(removeItemTest.items).to.be.empty;
+      var removeOnlyItemTest = new ShoppingList();
+      removeOnlyItemTest.addItem(testItem);
+      removeOnlyItemTest.removeItem(testItem);
+      expect(removeOnlyItemTest.items).to.be.empty;
 
+      // removes first item when there are two in the array
       var testItem1 = new ShoppingListItem('grape', 'fruit');
       var testItem2 = new ShoppingListItem('apple', 'red fruit');
-      var itemTest = new ShoppingList;
-      itemTest.addItem(testItem1);
-      itemTest.addItem(testItem2);
-      itemTest.removeItem(testItem1);
-      expect(itemTest.items)  
+      var removeFirstItemTest = new ShoppingList();
+      removeFirstItemTest.addItem(testItem1);
+      removeFirstItemTest.addItem(testItem2);
+      removeFirstItemTest.removeItem(testItem1);
+      expect(removeFirstItemTest.items).to.not.include.members([testItem1]);
     })
   })
 });
