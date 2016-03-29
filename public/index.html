@@ -3,25 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Shopping List</title>
-  <link href='https://fonts.googleapis.com/css?family=PT+Serif:700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Revalia' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
   
-  <div id="mainContainer">
-    <h1 id="shoppingListHeader">Shopping List</h1> 
+  <div id="background">
+    <div id="container">
+      <h1 id="shoppingListHeader">Shopping List</h1> 
 
-    <div id="formContainer">
-      <form id="form">
-        Title:<br>
-        <input type="text" id="title"></input><br>
-        Description:<br>
-        <input type="text" id="description"></input><br>
-        <button id="add_shopping_list_item_button" onclick="add_to_shopping_list ()">Add to Shopping List</button>
-      </form>
-    </div>
+        <form id="form">
+          Title:<br>
+          <input type="text" id="title"></input><br>
+          Description:<br>
+          <input type="text" id="description"></input><br>
+          <button id="add_shopping_list_item_button" onclick="add_to_shopping_list ()">Add to Shopping List</button>
+        </form>
 
-    <div id="content"></div>
+      <div id="content"></div>
+    </div>  
   </div>
 
   <script src="/js/shopping_list.js"></script>
